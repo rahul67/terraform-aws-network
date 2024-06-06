@@ -116,6 +116,7 @@ variable "vpc_endpoint_s3_gateway" {
 variable "vpc_endpoint_s3_policy" {
   default     = <<POLICY
     {
+        "Version": "2008-10-17",
         "Statement": [
             {
                 "Action": "*","Effect": "Allow","Resource": "*","Principal": "*"
