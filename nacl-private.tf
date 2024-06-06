@@ -10,6 +10,12 @@ resource "aws_network_acl" "private" {
       "EnvName" = var.name
     }
   )
+  lifecycle {
+    ignore_changes = [
+      subnet_ids
+    ]
+  }
+
 }
 
 ###########
